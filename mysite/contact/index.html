@@ -1,0 +1,123 @@
+[include file=../includes/vars.inc]
+
+[text]page=Contact[/text]
+
+[include file=[mypath]/includes/header.inc]
+
+	[include file=[mypath]/includes/nav.inc]
+
+	<div class ="contact_me">
+		<h1> 
+			Contact Information!
+		</h1> 
+			<h3>
+				Author Name:
+			</h3>
+				<p>
+					Dausin
+				</p>
+			<h3>
+				Author Address:
+			</h3>
+				<p>
+					<a href = "https://www.google.com/maps/place/The+Center+for+Instruction,+Technology+and+Innovation+(CiTi+BOCES)/@43.4576871,-76.2593905,15z/data=!4m5!3m4!1s0x0:0x72d2e1083edcfd38!8m2!3d43.4576871!4d-76.2593905">
+						179 County Rte 64, Mexico, NY 13114
+					</a>
+				</p>
+			<div class ="comments_form">
+				<h3>
+					Contact Us:
+				</h3>
+					<form action="thankyou.html[searchstr]" method="POST">
+						<label for="fullname">
+							Preferred Name:
+						</label>
+						<input type="text" id='fullname' name="fullname">
+
+						<br>
+
+						<label for="state">
+							State/Country:
+						</label>
+						[!]<select name="state" id="state" class="contact_select">
+							<optgroup label="United States of America" class="contact_opt">
+								[search db=[datapathvar]state.db&eqR_COUNTRYdatarq=1&eqR_TERRITORYdatarq=1&titleSort=1]
+								[founditems]
+								<option [showif [title]=New York]selected[/showif] class="contact_option">[TITLE]</option><br>
+								[/founditems]
+								[/search]
+							</optgroup>
+							<optgroup label="American Territories & Virgin Islands">
+								[search db=[datapathvar]state.db&eqR_COUNTRYdatarq=1&eqR_TERRITORYdatarq=2&titleSort=1]
+								[founditems]
+								<option class="contact_option">[TITLE]</option><br>
+								[/founditems]
+								[/search]
+							</optgroup>
+							<optgroup label="Canada">
+								[search db=[datapathvar]state.db&eqR_COUNTRYdatarq=2&eqR_TERRITORYdatarq=1&titleSort=1]
+								[founditems]
+								<option class="contact_option">[TITLE]</option><br>
+								[/founditems]
+								[/search]
+							</optgroup>
+							<optgroup label="Canadian Territories">
+								[search db=[datapathvar]state.db&eqR_COUNTRYdatarq=2&eqR_TERRITORYdatarq=2&titleSort=1]
+								[founditems]
+								<option class="contact_option">[TITLE]</option><br>
+								[/founditems]
+								[/search]
+							</optgroup>
+						</select>[/!]
+
+
+						[search db=[datapathvar]country.db&eqSTATUSdataRQ=1]
+							<select name="state" id="state" class="contact_select">
+								[founditems]
+									<optgroup label="[TITLE]" class="contact_opt">
+									[search db=[datapathvar]state.db&eqR_COUNTRYdatarq=[SKU]&eqTERRSTATdatarq=1&titleSort=1]
+										[founditems]
+										<option [showif [code]=NY]selected[/showif] class="contact_option">[TITLE]</option>
+										[/founditems]
+									[/search]
+									</optgroup>
+									<optgroup label="[showif [TITLE]=Canada]Canadian Territories[/showif][showif [TITLE]=United States of America]American Territories & Virgin Islands[/showif]" class="contact_opt">
+									[search db=[datapathvar]state.db&eqR_COUNTRYdatarq=[SKU]&eqTERRSTATdatarq=0&titleSort=1]
+										[founditems]
+											<option>[TITLE]</option>
+										[/founditems]
+									[/search]
+									</optgroup>
+								[/founditems]
+							</select>
+						[/search]
+
+						<label for="address">
+							Address:
+						</label>
+						<input type="text" id='address' name="address">
+
+						<br>
+
+						<label for="emailadd" class="email_add">
+							Email:
+						</label>
+						<input type="text" id='emailadd' class="emailadd" name="emailadd">
+
+						<br>
+
+						<label for="comments">
+							*Comment:
+						</label>
+						<textarea rows="10" cols="60" id='comments' name="comments" placeholder ="Feedback" required></textarea>
+						<br>
+						<br>
+						<input type ='submit' value='Send' id ="send_butt">
+					</form>
+			</div>
+	</div>
+</div>
+
+
+
+[include file=[mypath]/includes/footing.inc]

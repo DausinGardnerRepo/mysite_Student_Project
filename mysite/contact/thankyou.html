@@ -1,0 +1,77 @@
+[include file=../includes/vars.inc]
+[include file=[mypath]/includes/header.inc]
+	[include file=[mypath]/includes/nav.inc]
+	<h1 id ='thanks'>
+		THANK YOU FOR YOUR FEEDBACK, [uppercase][fullname][/uppercase]!
+	</h1>
+
+[Sendmail to=dgardner@citiboces.net&from=amccombie@citiboces.net&subject=Comment Form&Content-Type=multipart/alternative; boundary="email_layout"]
+
+--email_layout
+Content-Type: text/html;
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+
+			.outer_border {
+				background-color: #696969;
+				height: auto;
+				width: 100%;
+				margin: 0 auto;
+				padding-top: 50px;
+				position: relative;
+				padding-bottom: 50px;
+			}
+			.main_window {
+				height: 90%;
+				width: 80%;
+				background-color: #000000;
+				padding-bottom: 600px;
+				padding: 20px;
+				font-size: 20px;
+				color: #00FF00;
+				margin: auto;
+			}
+			#center_this {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="outer_border">
+			<div class="main_window">
+				<h1 id="center_this">
+					Comment From User: [fullname]
+				</h1>
+				<br>
+				<hr>
+				<br>
+				<p>
+					[comments]
+				</p>
+				<br>
+				<hr>
+				<br>
+
+				[emailadd] <br>
+
+				[address] <br>
+				[state]<br>
+
+				User Info: <br>
+				Time of Send: [time]<br>
+				Date of Send: [date]<br>
+				User IP: [ipaddress]<br>
+			</div>
+		</div>
+	</body>
+</html>
+
+--email_layout--
+
+[/sendmail]
+</div>
+[include file=[mypath]/includes/footing.inc]
+</html>

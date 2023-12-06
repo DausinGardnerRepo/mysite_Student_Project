@@ -1,0 +1,62 @@
+[include file=../../includes/vars.inc]
+[include file=[mypath]/includes/header.inc]
+	[include file=[mypath]/includes/nav.inc]
+		[showif [action]=replace]
+		[replace db=[datapathvar]state.db&eqSKUdataRQ=[SKUVAR]]TITLE=[url][TITLE][/url][/replace]
+		[/showif]
+
+
+		[search db=[datapathvar]state.db&eqSKUdataRQ=[SKUVAR]]
+			[founditems]
+			<form method="post" action="[thisurl]">
+				<input type="hidden" name="action" value="replace">
+				<input type="hidden" name="skuvar" value="[sku]">
+				<h1 style="text-align: center;">Sku: [SKU]</h1>
+					<br>
+					<input type="text" id="sku" name="sku" value ="[SKU]" readonly>
+				<br>
+				<label for="r_country">
+					R_COUNTRY:
+				</label>
+					<br>
+					<input type="text" id="r_country" name="r_country" value="[R_COUNTRY]">
+				<br>
+				<label for="title">
+					Title:
+				</label>
+					<br>
+					<input type="text" id="title" name="title" value="[TITLE]">
+				<br>
+				<label for="status">
+					Status:
+				</label>
+					<br>
+					<select name="status" class="status_select">
+						<option [showif [STATUS]=0]selected[/showif]>0</option>
+						<option  [showif [STATUS]=1]selected[/showif]>1</option>
+					</select>
+				<br>
+				<label for="code">
+					Code:
+				</label>
+					<br>
+					<input type="text" id="code" name="code" value="[CODE]">
+				<br>
+				<label for="terrstat">
+					Terrstat:
+				</label>
+					<br>
+					<input type="text" id="terrstat" name="terrstat" value="[TERRSTAT]">
+				<br>
+				<br>
+					<input type="submit" value="Correct Record">
+			</form>
+			[/founditems]
+		[/search]
+	</div>
+	
+[showif [action]=replace]
+	[redirect url=[adminpathvar]/state]
+[/showif]
+
+[include file=[mypath]/includes/footing.inc]

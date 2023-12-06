@@ -1,0 +1,71 @@
+1	1	1	1	AL	Alabama
+2	1	1	1	AK	Alaska
+3	1	1	1	AZ	Arizona
+4	1	1	1	AR	Arkansas
+5	1	1	1	CA	California
+6	1	1	1	CO	Colorado
+7	1	1	1	CT	Connecticut
+8	1	1	1	DE	Delaware
+9	1	1	1	FL	Florida
+10	1	1	1	GA	Georgia
+11	1	1	1	HI	Hawaii
+12	1	1	1	ID	Idaho
+13	1	1	1	IL	Illinois
+14	1	1	1	IN	Indiana
+15	1	1	1	IA	Iowa
+16	1	1	1	KS	Kansas
+17	1	1	1	KY	Kentucky
+18	1	1	1	LA	Louisiana
+19	1	1	1	ME	Maine
+20	1	1	1	MD	Maryland
+21	1	1	1	MA	Massachusetts
+22	1	1	1	MI	Michigan
+23	1	1	1	MN	Minnesota
+24	1	1	1	MS	Mississippi
+25	1	1	1	MO	Missouri
+26	1	1	1	MT	Montana
+27	1	1	1	NE	Nebraska
+28	1	1	1	NV	Nevada
+29	1	1	1	NH	New Hampshire
+30	1	1	1	NJ	New Jersey
+31	1	1	1	NM	New Mexico
+32	1	1	1	NY	New York
+33	1	1	1	NC	North Carolina
+34	1	1	1	ND	North Dakota
+35	1	1	1	OH	Ohio
+36	1	1	1	OK	Oklahoma
+37	1	1	1	OR	Oregon
+38	1	1	1	PA	Pennsylvania
+39	1	1	1	RI	Rhode Island
+40	1	1	1	SC	South Carolina
+41	1	1	1	SD	South Dakota
+42	1	1	1	TN	Tennessee
+43	1	1	1	TX	Texas
+44	1	1	1	UT	Utah
+45	1	1	1	VT	Vermont
+46	1	1	1	VA	Virginia
+47	1	1	1	WA	Washington
+48	1	1	1	WV	West Virginia
+49	1	1	1	WI	Wisconsin
+50	1	1	1	WY	Wyoming
+55	2	1	1	AB	Alberta
+56	2	1	1	BC	British Columbia
+57	2	1	1	MB	Manitoba
+58	2	1	1	NB	New Brunswick
+59	2	1	1	NL	Newfoundland and Labrador
+60	2	1	1	NS	Northwest Territories
+61	2	1	1	NT	Nova Scotia
+62	2	0	1	NU	Nunavut
+63	2	1	1	ON	Ontario
+64	2	1	1	PE	Prince Edward Island
+65	2	1	1	QC	Quebec
+66	2	1	1	SK	Saskatchewan
+67	2	0	1	YT	Yukon
+68	1	0	1	AS	American Somoa
+69	1	0	1	GU	Guam
+70	1	0	1	MP	Northern Mariana Islands
+71	1	0	1	PR	Puerto Rico
+72	1	0	1	VI	Virgin Islands
+73	1	2	1	DC	District of Columbia
+74	1	1	1	NY	New York
+75	1	1	1	1	1

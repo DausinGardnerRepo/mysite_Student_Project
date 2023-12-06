@@ -1,0 +1,231 @@
+[include file=../includes/vars.inc]
+
+[text]page=Pros_Cons[/text]
+
+[include file=[mypath]/includes/header.inc]
+	[include file=[mypath]/includes/nav.inc]
+
+	<div class="main_pros_cons">
+		<h1 class="up_shift">
+			Does Python Have Any Limitations?
+		</h1>
+			<p class="up_shift">
+				The short and simple of it is YES, Python has many MANY limitating factors.
+			</p>
+			<p>
+				No language is perfect, and Python is no exception to this rule. There are many factors that programmers must consider before deciding which language they want to develop with.
+			</p>
+			<p>
+				The following videos go much more in depth than I can here. The FIRST video was created by prominent Social Media programming educator <a href ="https://www.csdojo.io">CS Dojo</a>, and the SECOND video is a direct source from <a href = "https://en.wikipedia.org/wiki/Google">Google</a>, one of Python's main backers.
+			</p>
+	</div>
+
+	<div class ="videos">
+		<div class="video_child">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/kLZuut1fYzQ" title="YouTube video player" frameborder="3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="video_child">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/JXsf7oxqePc" title="YouTube video player" frameborder="3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	
+	<br>
+	<hr>
+	<br>
+
+	<div class="twin_list">
+		<div class ="pros_list">
+			<h1 class = "head_of_list">
+				Pros
+			</h1>
+
+			<h2>
+				Noob Oriented!
+			</h2>
+				<ul>
+					<p>
+						As I've mentioned time and time again, Python is now and always has been based around a beginner-friendly enviornment. The start of every Python developers journey is as simple as:
+					</p>
+						<pre class ="example">
+							<code>
+								<i>
+									print("hello, world!")
+								</i>
+							</code>
+						</pre>
+					<p>
+						This is in stark contrast to other programming languages, such as C:
+					</p>
+						<pre class ="example">
+							<code>
+								<i>#include <stdio.h></i>
+								<i>int main(void)</i>
+								<i>{</i>
+    								<i>printf("hello, world\n");</i>
+								<i>}</i>
+							</code> 
+						</pre>
+					<p>
+						Or, the worst of them all, <a href = "https://en.wikipedia.org/wiki/Machine_code">Machine Code</a>, which is the lowest tier of programming and acts as a direct route to telling the CPU what functions to perform. At some level, all code eventually turns into Machine Code when executed.
+					</p>
+						<pre class ="example">
+							<code class="move">
+								<i>b8    21 0a 00 00   #moving "!\n" into eax </i>
+								<i>a3    0c 10 00 06   #moving eax into first memory location</i>
+								<i>b8    6f 72 6c 64   #moving "orld" into eax</i>
+								<i>a3    08 10 00 06   #moving eax into next memory location</i>
+								<i>b8    6f 2c 20 57   #moving "o, W" into eax</i>
+								<i>a3    04 10 00 06   #moving eax into next memory location</i>
+								<i>b8    48 65 6c 6c   #moving "Hell" into eax</i>
+								<i>a3    00 10 00 06   #moving eax into next memory location</i>
+								<i>b9    00 10 00 06   #moving pointer to start of memory location into ecx</i>
+								<i>ba    10 00 00 00   #moving string size into edx</i>
+								<i>bb    01 00 00 00   #moving "stdout" number to ebx</i>
+								<i>b8    04 00 00 00   #moving "print out" syscall number to eax</i>
+								<i>cd    80            #calling the linux kernel to execute our print to stdout</i>
+								<i>b8    01 00 00 00   #moving "sys_exit" call number to eax</i>
+								<i>cd    80            #executing it via linux sys_call</i>
+							</code>
+						</pre>
+				</ul>
+
+			<br>
+			<br>
+
+			<h2>
+				High Scalability
+			</h2>
+				<ul>
+					<blockquote class="gen_def">
+						<h3>
+							Scalaility:
+						</h3>
+						<ul>
+							<b>
+								The measurement of a system's ability to increase or decrease in peformance cost in response to changes in application and system processing demands
+							</b>
+						</ul>
+					</blockquote>
+					<p>
+						Python, due to it's focus on simplicity, already comes pre-packaged with <a href = "https://www.techtarget.com/searchdatamanagement/definition/data-structure#:~:text=A%20data%20structure%20is%20a,they%20need%20in%20appropriate%20ways.">Data Structures</a>, <a href="https://docs.python.org/3/library/">HUNDREDS</a> of libraries created by the community, and a focus on readability/ease-of-use. These factors combine to turn Python into one of the most efficient languages available today.
+					</p>
+					<p>
+						All of these features build onto one another to make Python as simplistic as possible for the coder, meaning that writing dynamic systems and using pre-packaged libraries to complete high-scaled tasks is relatively easy for an experienced developer.
+					</p>
+				</ul>
+			<h2>
+				Portability
+			</h2>
+				<ul>
+					<p>
+						Python is a <a href ="https://en.wikipedia.org/wiki/Write_once,_run_anywhere">"WRITE ONCE, RUN ANYWHERE"</a> programming langauge, this means that code written in Python on a PC can run on mobile phones, and vice versa, assuming of course you install the appropriate libraries and are using a <a href="www.aosabook.org/en/500L/a-python-interpreter-written-in-python.html">Python Interpreter</a>.
+					</p>
+					<p>
+						Not only is it cross-paltform, but Python is even more effective running accross different OS. This means that <a href ="https://www.geeksforgeeks.org/introduction-to-linux-operating-system/">Linux</a>, <a href="https://en.wikipedia.org/wiki/Microsoft_Windows">Windows</a>, and <a href="https://en.wikipedia.org/wiki/UnixS">Unix-based Systems</a>, can all run the same piece of Python code without any alterations. 
+					</p>
+				</ul>
+		</div>
+
+		<div class="cons_list">
+			<h1 class = "head_of_list">
+				Cons
+			</h1>
+
+			<h2>
+				Speed
+			</h2>
+				<ul>
+					<p>
+						Python is an <a href ="https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/">interpreted language</a>, this means that the code is read line-by-line and translated to the machine by an interpreter. This contrasts heavily with Compiled languages, in which the code translates directly into <a href ="https://en.wikipedia.org/wiki/Machine_code">Machine Code</a>.
+					</p>
+					<p>
+						While this difference may seem miniscule, it can become the difference between whether or not your program times out the server entirely. This means that Python coders once they become advanced enough must take the time to learn how to write their code more <a href="https://wiki.python.org/moin/PythonSpeed/PerformanceTips">efficiently</a>.
+				</ul>
+			<br>
+
+			<br>
+
+			<h2>
+				Too Dynamic
+			</h2>
+				<ul>
+					<blockquote class="gen_def">
+						<h3>
+							Dynamic Typing
+						</h3>
+						<ul>
+							The ability of a compiler or interpreter to assign a type to all declared variables at run-time.
+						</ul>
+					</blockquote>
+					<p>
+						While commonly regarded as one of it's strongest features, Python's <a href ="https://realpython.com/lessons/dynamic-vs-static/">Dynamic Typing</a> is the source of many developers frustration.
+					</p>
+					<p>
+						The larger a project becomes, the more variables and complex algorithims are required to keep it running. This is less of an issue with static typing where variable types are declared as they're written, but when the Python interpreter dynamically changes the types of different variables at runtime, the system may throw massive errors that the programmer won't be able to correct without a careful, line-by-line search.
+					</p>
+				</ul>
+
+			<br>
+			<br>
+
+			<h2>
+				Memory Performance
+			</h2>
+				<ul>
+					<p>
+						<blockquote class="gen_def">
+							<h3>
+								Memory
+							</h3>
+
+							<ul>
+								In computing, memory is a device or system that is used to store information for immediate use in a computer or related computer hardware and digital electronic devices. 
+							</ul>
+						</blockquote>
+
+						<p>
+							Python has one major issue when it comes to it's memory usage and allocation:
+						</p>
+							<h4 class="head_of_con">
+								Garbage Collection
+							</h4>
+
+							<blockquote class="gen_def">
+								<h3>
+								Garbage Collection
+								</h3>
+
+								<ul>
+									In computer science, garbage collection is a form of automatic memory management. The garbage collector attempts to reclaim memory which was allocated by the program, but is no longer referenced; such memory is called garbage.
+								</ul>
+							</blockquote>
+
+						<p>
+							When you declare a <a href ="https://www.w3schools.com/python/python_variables.asp">variable</a> in Python, that variable is not stored into your memory automatically. Instead, you must declare the type of variable you are storing, the system will then allocate the correct amount of memory to that variable's storage.
+						</p> 
+						<p>
+							The garbage collection is automated in Python, meaning that the system must actively keep a count of how many times a variable is referenced by an object, then subtracts by each time the variable is used. When that counter hits "0" the system will automatically deallocate the memory to free up space. This is called reference counting.
+						</p>
+							<h4> 
+								What's The Issue With Reference Counting?
+							</h4>
+						<p>
+							Because Python is a <a href ="www.tutorialspoint.com/single-threaded-and-multi-threaded-processes">single threaded</a> language by design, a <a href="https://realpython.com/python-gil/">Global Interpreter Lock</a> must be used to protect the reference count. If ran without an implemented GIL, errors could arise from situations Python is not built to handle, such as two threads increasing and decreasing the reference count simultaneously. 
+						</p>
+						<p>
+							This means that Python cannot be utilized at the maximum potential of systems that support multi-thread processing, and it is by designed built for simplistic, line-by-line execution at runtime. This essentially clogs memory allocation at larger scales, as the system can only use one of it's cores to process the reference count, and therefore variables aren't sent to garabge collection as qucikly as they otherwise might have been in a multi-thread enviornment.
+						</p>
+					</p>
+				</ul>
+		</div>
+	</div>
+
+	<br>
+
+</div>
+
+<hr>
+<br>
+
+[include file=[mypath]/includes/footing.inc]
+

@@ -1,0 +1,46 @@
+[include file=../../includes/vars.inc]
+[include file=[mypath]/includes/header.inc]
+	[include file=[mypath]/includes/nav.inc]
+	<form method="post" action="[thisurl]">
+		<input type="hidden" name="action" value="add">
+		<br>
+		<label for="title">
+			Title:
+		</label>
+			<br>
+			<input type="text" id="title" name="title">
+		<br>
+		<label for="status">
+			Status:
+		</label>
+			<br>
+			<select name="status" class="status_select">
+				<option>0</option>
+				<option selected>1</option>
+			</select>
+		<br>
+		<label for="code">
+			Code:
+		</label>
+			<br>
+			<input type="text" id="code" name="code">
+		<br>
+		<br>
+			<input type="submit" value="Add Record">
+	</form>
+</div>
+
+[showif [action]=add]
+[append db=[datapathvar]country.db&autonumber=SKU][!]
+[/!]&TITLE=[TITLE][!]
+[/!]&STATUS=[STATUS][!]
+[/!]&CODE=[CODE][!]
+[/!][/append]
+[/showif]
+
+
+[showif [action]=add]
+	[redirect url=[adminpathvar]/country]
+[/showif]
+
+[include file=[mypath]/includes/footing.inc]

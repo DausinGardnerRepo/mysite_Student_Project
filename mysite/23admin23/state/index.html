@@ -1,0 +1,44 @@
+[include file="../../includes/vars.inc"]
+	[include file=[mypath]/includes/header.inc]
+	[include file=[mypath]/includes/nav.inc]
+
+
+	<div class="add_button">
+		<a href="[adminpathvar]state/add.html[searchstr]">Add</a>
+	</div>
+	<div class="data_table">
+		<table>
+			[search db=[datapathvar]state.db&neSKUdataRQ=fa&skutype=num&skusort=1]
+					[founditems]
+						<tr>
+							<td>
+								[SKU]
+							</td>
+							<td>
+								[R_COUNTRY]
+							</td>
+							<td>
+								[TERRSTAT]
+							</td>
+							<td>
+								[STATUS]
+							</td>
+							<td>
+								[CODE]
+							</td>
+							<td>
+								[TITLE]
+							</td>
+							<td>
+								<a href="[adminpathvar]state/edit.html?skuvar=[sku]">Edit</a>
+							</td>
+							<td>
+								<a href="[thisurl]?action=del&skuvar=[sku]">Delete</a>
+							</td>
+						</tr>
+					[/founditems]
+			[/search]
+		</table>
+	</div>
+</div>
+[include file=[mypath]/includes/footer.inc]

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		[include file="../../includes/vars.inc"]
+		<link rel="stylesheet" href="[mypath]/css/stylesheet.css?v=[cart]">
+	</head>
+	<body>
+		[showif [action]=replace]
+		[replace db=[datapathvar]country.db&eqSKUdataRQ=[SKUVAR]]TITLE=[url][TITLE][/url]&SKU=[url][SKU][/url]&STATUS=[url][STATUS][/url]&CODE=[url][CODE][/url][/replace]
+		[/showif]
+
+
+		[search db=[datapathvar]country.db&eqSKUdataRQ=[SKUVAR]]
+			[founditems]
+				<form method="post" action="[thisurl]">
+				<input type="hidden" name="action" value="replace">
+				<input type="hidden" name="skuvar" value="[sku]">
+				<label for="sku">
+					Sku:
+				</label>
+					<br>
+					<input type="text" id="sku" name="sku" value ="[SKU]" readonly>
+				<br>
+				<label for="title">
+					Title:
+				</label>
+					<br>
+					<input type="text" id="title" name="title" value="[TITLE]">
+				<br>
+				<label for="status">
+					Status:
+				</label>
+					<br>
+					<select name="status">
+						<option [showif [STATUS]=0]selected[/showif]>0</option>
+						<option  [showif [STATUS]=1]selected[/showif]>1</option>
+					</select>
+				<br>
+				<label for="code">
+					Code:
+				</label>
+					<br>
+					<input type="text" id="code" name="code" value="[CODE]">
+				<br>
+					<input type="submit" value="Correct Record">
+			</form>
+			[/founditems]
+		[/search]
+		[showif [action]=replace]
+			[redirect url=[adminpathvar]/country]
+		[/showif]
+	</body>
+</html>

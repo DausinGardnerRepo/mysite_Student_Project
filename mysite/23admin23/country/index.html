@@ -1,0 +1,44 @@
+[include file="../../includes/vars.inc"]
+	[include file=[mypath]/includes/header.inc]
+	[include file=[mypath]/includes/nav.inc]
+
+
+	[showif [action]=del]
+	[delete db=[datapathvar]country.db&eqSKUdataRQ=[skuvar]]
+	[/showif]
+
+	
+	<div class="add_button">
+		<a href="[adminpathvar]country/add.html[searchstr]">Add</a>
+	</div>
+		<div class="data_table">
+			<table>
+				[search db=[datapathvar]country.db&neSKUdataRQ=fa&skutype=num&skusort=1]
+						[founditems]
+							<tr>
+								<td>
+									[SKU]
+								</td>
+								<td>
+									[STATUS]
+								</td>
+								<td>
+									[CODE]
+								</td>
+								<td>
+									[TITLE]
+								</td>
+								<td>
+									<a href="[adminpathvar]country/edit.html?skuvar=[sku]">edit</a>
+								</td>
+								<td>
+									<a href="[adminpathvar]country?action=del&skuvar=[sku]">Delete</a>
+								</td>
+							</tr>
+						[/founditems]
+				[/search]
+			</table>
+		</div>
+	</div>
+
+[include file=[mypath]/includes/footing.inc]

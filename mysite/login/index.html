@@ -1,0 +1,38 @@
+[include file=../includes/vars.inc]
+[include file=[mypath]/includes/header.inc]
+	[include file=[mypath]/includes/nav.inc]
+
+	[showif [action]=setcookie]
+	[setcookie name=[uservar]&value=[passvar]&expires=[format days_to_date %A, %d-%b-%Y][math]{[date]}+5[/math][/format] [math time]{[time]}+{05:00:00}[/math] GMT&domain=dev.citicoders.org]
+	[/showif]
+
+	<form method="POST" action="[thisurl]">
+		<input type="hidden" name="action" value="setcookie">
+		<label for="uservar">
+			Username
+		</label>
+		<input type="text" name="uservar" id="uservar">
+		<br>
+		<br>
+		<label for="passvar">
+			Password
+		</label>
+		<input type="text" name="passvar" id="passvar">
+		<br>
+		<br>
+		<label for="fname">
+			First Name
+		</label>
+		<input type="text" name="fname" id="fname">
+		<br>
+		<br>
+		<label for="lname">
+			Last Name
+		</label>
+		<input type="text" name="lname" id="lname">
+		<br>
+		<br>
+		<input type="submit" value="Sign Up">
+	</form>
+	</div>
+[include file=[mypath]/includes/footing.inc]
